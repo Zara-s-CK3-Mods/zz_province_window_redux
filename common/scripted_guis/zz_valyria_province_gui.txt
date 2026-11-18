@@ -7,16 +7,38 @@
 		county.holder = scope:player
 	}
 	is_shown = {
-		not = {
-			has_holding_type = ruin_holding
-		}
+		always = yes
 	}
 	effect = {
-		add_province_modifier = extra_building_slot
+		add_province_modifier = zz_redux_extra_district_slot # 1.21: slots are district slots
 		scope:player = {
 			remove_short_term_gold = {
 				gold = {
 					value = 1500
+				}
+			}
+		}
+	}
+}
+
+# Province Window Redux: Add Building Slot button in the holding view, next to Add District Slot
+zz_valyria_province_building_slot = {
+	scope = province
+	is_valid = {
+		scope:player = {
+			gold >= 750
+		}
+		county.holder = scope:player
+	}
+	is_shown = {
+		always = yes
+	}
+	effect = {
+		add_province_modifier = zz_redux_extra_building_slot
+		scope:player = {
+			remove_short_term_gold = {
+				gold = {
+					value = 750
 				}
 			}
 		}
@@ -94,32 +116,6 @@ zz_valyria_swap_holding_type ={
 	}
 }
 
-zz_valyria_trading_post_tab_enable ={
-	scope = character 	
-	saved_scopes = {
-	}
-	is_shown = {
-		government_has_flag = tradepost
-	}
-}
-
-zz_valyria_has_trading_post ={
-	scope = province 	
-	saved_scopes = {
-		zz_county
-	}
-	is_shown = {
-		scope:zz_county.county = {
-			var:trading_post ?= flag:true
-		}
-	}
-	is_valid = {
-		scope:player = {
-			gold >= 2500
-		}
-	}
-}
-
 zz_valyria_dragon_visit = {
 	scope = province 	
 	is_shown = {
@@ -144,7 +140,7 @@ zz_valyria_dragon_visit = {
 	}
 }
 
-zz_valyria_province_cast_click = {
+zz_pw_province_cast_click = {
 	scope = character
 	is_shown = {
 		zz_valyria_is_mage = yes 
@@ -162,11 +158,27 @@ zz_valyria_province_cast_click = {
 			name = zz_selected_mystery_county 
 			value = scope:selected_province.county
 		}
+		# Provinces with no holding built have no owner of their own, so use the county's holder
 		scope:selected_province = {
-			province_owner = {
-				save_scope_as = recipient
+			if = {
+				limit = {
+					exists = province_owner
+				}
+				province_owner = {
+					save_scope_as = recipient
+				}
+			}
+			else = {
+				county.holder ?= {
+					save_scope_as = recipient
+				}
 			}
 		}
-		zz_ui_setup_effect = yes 
+		if = {
+			limit = {
+				exists = scope:recipient
+			}
+			zz_ui_setup_effect = yes
+		}
 	}
 }

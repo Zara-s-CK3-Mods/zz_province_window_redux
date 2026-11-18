@@ -6,3 +6,8 @@
  holding_type_02.desc:0 "$game_concept_temple_holding_desc$"
  holding_type_03.name:0 "[city_holding]" 
  holding_type_03.desc:0 "$game_concept_city_holding_desc$"
+ ZZ_REDUX_ADD_DISTRICT_SLOT:0 "Add District Slot"
+ ZZ_REDUX_SWAP_HOLDING:0 "Swap Holding"
+ zz_redux_extra_district_slot:0 "Extra District Slot"
+ ZZ_REDUX_ADD_BUILDING_SLOT:0 "Add Building Slot"
+ zz_redux_extra_building_slot:0 "Extra Building Slot"

@@ -18,19 +18,19 @@ types CountyViewTypes
 			parentanchor = center
 			size = { 35 35 }
 			button_icon_highlight = {
-				texture = "gfx/interface/icons/point_of_interest_types/agot_poi_dragonlore.dds"
+				texture = "gfx/interface/icons/point_of_interest_types/poi_natural_feature.dds"
 				parentanchor = center
 				alwaystransparent = yes
 				size = { 25 25 }
 			}
 		}
 	}
-	type zz_magic_cast_province_button = widget
+	type zz_pw_cast_province_button = widget
 	{
 		size = { 32 32 }
 		button_round = {
 			name = "button_zz_cast_magic"
-			visible = "[GetScriptedGui('zz_valyria_province_cast_click').IsShown(GetPlayer.MakeScope)]"
+			visible = "[GetScriptedGui('zz_pw_province_cast_click').IsShown(GetPlayer.MakeScope)]"
 			#onclick = "[GetVariableSystem.Toggle('knight_tree_visible')]"
 			onclick = "[CloseGameView( 'my_realm' )]"
 			onclick = "[CloseGameView( 'military' )]"
@@ -48,14 +48,14 @@ types CountyViewTypes
 			onclick = "[GetScriptedGui('zz_valyria_magic_crafting_close').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 			onclick = "[GetScriptedGui('zz_valyria_magic_scroll_learning_close').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 			
-			onclick = "[GetScriptedGui('zz_valyria_province_cast_click').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('selected_province', HoldingView.GetProvince.MakeScope).End)]"
+			onclick = "[GetScriptedGui('zz_pw_province_cast_click').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('selected_province', HoldingView.GetProvince.MakeScope).End)]"
 			using = tooltip_ne
 			tooltip = "ZZ_CAST_MYSTERY_TT"
 			position = { 0 0 }
 			parentanchor = center
 			size = { 35 35 }
 			button_icon_highlight = {
-				texture = "gfx/interface/icons/court_position_task_types/zz_valyria_court_mage_drops_of_power_ritual.dds"
+				texture = "gfx/interface/icons/zz_magic_casting.dds"
 				parentanchor = center
 				alwaystransparent = yes
 				size = { 25 25 }

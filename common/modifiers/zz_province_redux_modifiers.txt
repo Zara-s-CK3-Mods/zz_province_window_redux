@@ -1,0 +1,11 @@
+﻿# Added by the Add District Slot button in the holding view (common/scripted_guis/zz_valyria_province_gui.txt)
+zz_redux_extra_district_slot = {
+	stacking = yes
+	district_slot_add = 1
+}
+
+# Added by the Add Building Slot button in the holding view (common/scripted_guis/zz_valyria_province_gui.txt)
+zz_redux_extra_building_slot = {
+	stacking = yes
+	building_slot_add = 1
+}

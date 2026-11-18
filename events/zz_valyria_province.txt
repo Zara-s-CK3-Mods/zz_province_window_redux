@@ -49,13 +49,8 @@ zz_valyria_province.0211 = {
 				trigger = {
 					var:meditation_location = {
 						OR = {
-							#AGOT Modified
-							#terrain = mountains
-							#terrain = desert_mountains
-							agot_is_mountains_terrain = yes
-							agot_is_desert_mountains_terrain = yes
-							agot_is_glacier_terrain = yes
-							agot_is_canyon_terrain = yes
+							terrain = mountains
+							terrain = desert_mountains
 						}
 					}
 				}
@@ -65,86 +60,71 @@ zz_valyria_province.0211 = {
 				trigger = {
 					var:meditation_location = {
 						OR = {
-							#AGOT Modified
-							#terrain = forest
-							#terrain = taiga
-							agot_is_forest_terrain = yes
-							agot_is_taiga_terrain = yes
-							agot_is_cloudforest_terrain = yes
-							agot_is_taiga_bog_terrain = yes
+							terrain = forest
+							terrain = taiga
 						}
 				}
 				}
 				desc = religious_decision.0211.desc.beginning.forest
 			}
 			triggered_desc = {
-				#AGOT Modified
 				#trigger = {var:meditation_location = { terrain = plains }}
 				trigger = {
-					var:meditation_location = { agot_is_plains_terrain = yes }
+					var:meditation_location = { terrain = plains }
 				}
 				desc = religious_decision.0211.desc.beginning.plains
 			}
 			triggered_desc = {
-				#AGOT Modified
 				#trigger = {var:meditation_location = { terrain = hills }}
 				trigger = {
 					var:meditation_location = {
 						OR = {
-							agot_is_hills_terrain = yes
-							agot_is_highlands_terrain = yes
+							terrain = hills
 						}
 					}
 				}
 				desc = religious_decision.0211.desc.beginning.hills
 			}
 			triggered_desc = {
-				#AGOT Modified
 				#trigger = {var:meditation_location = { terrain = steppe }}
 				trigger = {
 					var:meditation_location = {
 						OR = {
-							agot_is_steppe_terrain = yes
-							agot_is_frozen_flats_terrain = yes
+							terrain = steppe
 						}
 					}
 				}
 				desc = religious_decision.0211.desc.beginning.steppe
 			}
 			triggered_desc = {
-				#AGOT Modified
 				#trigger = {var:meditation_location = { terrain = drylands }}
 				trigger = {
-					var:meditation_location = { agot_is_drylands_terrain = yes }
+					var:meditation_location = { terrain = drylands }
 				}
 				desc = religious_decision.0211.desc.beginning.drylands
 			}
 			triggered_desc = {
-				#AGOT Modified
 				#trigger = {var:meditation_location = { terrain = wetlands }}
 				trigger = {
 					var:meditation_location = {
 						OR = {
-							agot_is_wetlands_terrain = yes
-							agot_is_the_bog_terrain = yes
+							terrain = wetlands
 						}
 					}
 				}
 				desc = religious_decision.0211.desc.beginning.wetlands
 			}
 			triggered_desc = {
-				#AGOT Modified
 				#trigger = {var:meditation_location = { terrain = jungle }}
 				trigger = {
-					var:meditation_location = { agot_is_jungle_terrain = yes }
+					var:meditation_location = { terrain = jungle }
 				}
 				desc = religious_decision.0211.desc.beginning.jungle
 			}
 			triggered_desc = {
-				#AGOT Modified
 				#trigger = {var:meditation_location = { terrain = desert }}
 				trigger = {
-					var:meditation_location = { agot_is_desert_terrain = yes }
+					var:meditation_location = { terrain = desert }
 				}
 				desc = religious_decision.0211.desc.beginning.desert
 			}
@@ -267,19 +247,10 @@ zz_valyria_province.0211 = {
 							add = 40
 							scope:meditation_location = {
 								OR = {
-									#AGOT Modified
-									#terrain = mountains
-									#terrain = desert_mountains
-									#terrain = forest
-									#terrain = taiga
-									agot_is_mountains_terrain = yes
-									agot_is_desert_mountains_terrain = yes
-									agot_is_forest_terrain = yes
-									agot_is_taiga_terrain = yes
-									agot_is_glacier_terrain = yes
-									agot_is_canyon_terrain = yes
-									agot_is_cloudforest_terrain = yes
-									agot_is_taiga_bog_terrain = yes
+									terrain = mountains
+									terrain = desert_mountains
+									terrain = forest
+									terrain = taiga
 								}
 							}
 						}
@@ -302,13 +273,8 @@ zz_valyria_province.0211 = {
 									add = 121
 									scope:meditation_location = {
 										OR = {
-											#AGOT Modified
-											#terrain = desert_mountains
-											#terrain = mountains
-											agot_is_desert_mountains_terrain = yes
-											agot_is_mountains_terrain = yes
-											agot_is_glacier_terrain = yes
-											agot_is_canyon_terrain = yes
+											terrain = desert_mountains
+											terrain = mountains
 										}
 									}
 								}
@@ -337,11 +303,8 @@ zz_valyria_province.0211 = {
 						modifier = {
 							add = 75
 							scope:meditation_location = {
-								#AGOT Modified
-								#terrain = steppe
 								OR = {
-									agot_is_steppe_terrain = yes
-									agot_is_frozen_flats_terrain = yes
+									terrain = steppe
 								}
 							}
 						}
@@ -349,13 +312,8 @@ zz_valyria_province.0211 = {
 							add = 150
 							scope:meditation_location = {
 								OR = {
-									#AGOT Modified
-									#terrain = mountains
-									#terrain = desert_mountains
-									agot_is_mountains_terrain = yes
-									agot_is_desert_mountains_terrain = yes
-									agot_is_glacier_terrain = yes
-									agot_is_canyon_terrain = yes
+									terrain = mountains
+									terrain = desert_mountains
 								}
 							}
 						}
@@ -369,11 +327,8 @@ zz_valyria_province.0211 = {
 						modifier = {
 							add = 50
 							scope:meditation_location = {
-								#AGOT Modified
-								#terrain = hills
 								OR = {
-									agot_is_hills_terrain = yes
-									agot_is_highlands_terrain = yes
+									terrain = hills
 								}
 							}
 						}
@@ -386,20 +341,15 @@ zz_valyria_province.0211 = {
 							# Only in hot regions.
 							scope:meditation_location = {
 								OR = {
-									#AGOT Modified
-									#terrain = desert
-									#terrain = drylands
-									agot_is_desert_terrain = yes
-									agot_is_drylands_terrain = yes
+									terrain = desert
+									terrain = drylands
 								}
 							}
 						}
 						modifier = {
 							add = 100
 							scope:meditation_location = {
-								#AGOT Modified
-								#terrain = desert
-								agot_is_desert_terrain = yes
+								terrain = desert
 							}
 						}
 						add_character_flag = meditation_fugue
@@ -418,15 +368,9 @@ zz_valyria_province.0211 = {
 					scope:at_home = no
 					scope:meditation_location = {
 						OR = {
-							#AGOT Modified
-							#terrain = forest
-							#terrain = taiga
-							#terrain = drylands
-							agot_is_forest_terrain = yes
-							agot_is_taiga_terrain = yes
-							agot_is_drylands_terrain = yes
-							agot_is_cloudforest_terrain = yes
-							agot_is_taiga_bog_terrain = yes
+							terrain = forest
+							terrain = taiga
+							terrain = drylands
 						}
 					}
 				}
@@ -435,20 +379,11 @@ zz_valyria_province.0211 = {
 					scope:at_home = no
 					scope:meditation_location = {
 						OR = {
-							#AGOT Modified
-							#terrain = desert
-							#terrain = desert_mountains
-							#terrain = mountains
-							#terrain = wetlands
-							#terrain = jungle
-							agot_is_desert_terrain = yes
-							agot_is_desert_mountains_terrain = yes
-							agot_is_mountains_terrain = yes
-							agot_is_wetlands_terrain = yes
-							agot_is_jungle_terrain = yes
-							agot_is_glacier_terrain = yes
-							agot_is_canyon_terrain = yes
-							agot_is_the_bog_terrain = yes
+							terrain = desert
+							terrain = desert_mountains
+							terrain = mountains
+							terrain = wetlands
+							terrain = jungle
 						}
 					}
 				}
@@ -496,11 +431,8 @@ zz_valyria_province.0211 = {
 						modifier = {
 							add = 50
 							var:meditation_location = {
-								#AGOT Modified
-								#terrain = wetlands
 								OR = {
-									agot_is_wetlands_terrain = yes
-									agot_is_the_bog_terrain = yes
+									terrain = wetlands
 								}
 							}
 						}
@@ -527,9 +459,7 @@ zz_valyria_province.0211 = {
 					75 = {
 						trigger = {
 							scope:meditation_location = {
-								#AGOT Modified
-								#terrain = jungle
-								agot_is_jungle_terrain = yes
+								terrain = jungle
 							}
 						}
 						add_character_flag = meditation_distraction
@@ -549,11 +479,8 @@ zz_valyria_province.0211 = {
 						trigger = {
 							scope:meditation_location = {
 								OR = {
-									#AGOT Modified
-									#terrain = desert
-									#terrain = drylands
-									agot_is_desert_terrain = yes
-									agot_is_drylands_terrain = yes
+									terrain = desert
+									terrain = drylands
 								}
 							}
 						}
@@ -563,13 +490,8 @@ zz_valyria_province.0211 = {
 						trigger = {
 							scope:meditation_location = {
 								OR = {
-									#AGOT Modified
-									#terrain = mountains
-									#terrain = desert_mountains
-									agot_is_mountains_terrain = yes
-									agot_is_desert_mountains_terrain = yes
-									agot_is_glacier_terrain = yes
-									agot_is_canyon_terrain = yes
+									terrain = mountains
+									terrain = desert_mountains
 								}
 							}
 						}
